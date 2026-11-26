@@ -1,7 +1,9 @@
 name: Rename VK Audio
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Оставляем возможность запускать вручную кнопкой
+  schedule:
+    - cron: '0 9 * * *' # Автоматический запуск каждый день в 12:00 по МСК
 
 jobs:
   run-script:
